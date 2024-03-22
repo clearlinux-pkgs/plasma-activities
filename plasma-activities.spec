@@ -9,13 +9,17 @@
 #
 Name     : plasma-activities
 Version  : 6.0.2
-Release  : 5
+Release  : 6
 URL      : https://download.kde.org/stable/plasma/6.0.2/plasma-activities-6.0.2.tar.xz
 Source0  : https://download.kde.org/stable/plasma/6.0.2/plasma-activities-6.0.2.tar.xz
 Source1  : https://download.kde.org/stable/plasma/6.0.2/plasma-activities-6.0.2.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0 LGPL-2.0 LGPL-2.1 LGPL-3.0 MIT
+Requires: plasma-activities-bin = %{version}-%{release}
+Requires: plasma-activities-data = %{version}-%{release}
+Requires: plasma-activities-lib = %{version}-%{release}
+Requires: plasma-activities-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
@@ -26,6 +30,55 @@ BuildRequires : extra-cmake-modules-data
 %description
 In order to properly display the files, use the GNU man command.
 
+%package bin
+Summary: bin components for the plasma-activities package.
+Group: Binaries
+Requires: plasma-activities-data = %{version}-%{release}
+Requires: plasma-activities-license = %{version}-%{release}
+
+%description bin
+bin components for the plasma-activities package.
+
+
+%package data
+Summary: data components for the plasma-activities package.
+Group: Data
+
+%description data
+data components for the plasma-activities package.
+
+
+%package dev
+Summary: dev components for the plasma-activities package.
+Group: Development
+Requires: plasma-activities-lib = %{version}-%{release}
+Requires: plasma-activities-bin = %{version}-%{release}
+Requires: plasma-activities-data = %{version}-%{release}
+Provides: plasma-activities-devel = %{version}-%{release}
+Requires: plasma-activities = %{version}-%{release}
+
+%description dev
+dev components for the plasma-activities package.
+
+
+%package lib
+Summary: lib components for the plasma-activities package.
+Group: Libraries
+Requires: plasma-activities-data = %{version}-%{release}
+Requires: plasma-activities-license = %{version}-%{release}
+
+%description lib
+lib components for the plasma-activities package.
+
+
+%package license
+Summary: license components for the plasma-activities package.
+Group: Default
+
+%description license
+license components for the plasma-activities package.
+
+
 %prep
 %setup -q -n plasma-activities-6.0.2
 cd %{_builddir}/plasma-activities-6.0.2
@@ -35,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711131150
+export SOURCE_DATE_EPOCH=1711132069
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -72,7 +125,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711131150
+export SOURCE_DATE_EPOCH=1711132069
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-activities
 cp %{_builddir}/plasma-activities-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-activities/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -91,3 +144,54 @@ popd
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/qt6/qml/org/kde/activities/kde-qmlmodule.version
+/usr/lib64/qt6/qml/org/kde/activities/plasmaactivitiesextensionplugin.qmltypes
+/usr/lib64/qt6/qml/org/kde/activities/qmldir
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/plasma-activities-cli6
+
+%files data
+%defattr(-,root,root,-)
+/usr/share/qlogging-categories6/plasma-activities.categories
+/usr/share/qlogging-categories6/plasma-activities.renamecategories
+
+%files dev
+%defattr(-,root,root,-)
+/usr/include/PlasmaActivities/PlasmaActivities/ActivitiesModel
+/usr/include/PlasmaActivities/PlasmaActivities/Consumer
+/usr/include/PlasmaActivities/PlasmaActivities/Controller
+/usr/include/PlasmaActivities/PlasmaActivities/Info
+/usr/include/PlasmaActivities/PlasmaActivities/ResourceInstance
+/usr/include/PlasmaActivities/PlasmaActivities/Version
+/usr/include/PlasmaActivities/plasma_activities_version.h
+/usr/include/PlasmaActivities/plasmaactivities/activitiesmodel.h
+/usr/include/PlasmaActivities/plasmaactivities/consumer.h
+/usr/include/PlasmaActivities/plasmaactivities/controller.h
+/usr/include/PlasmaActivities/plasmaactivities/info.h
+/usr/include/PlasmaActivities/plasmaactivities/plasma_activities_export.h
+/usr/include/PlasmaActivities/plasmaactivities/resourceinstance.h
+/usr/include/PlasmaActivities/plasmaactivities/version.h
+/usr/lib64/cmake/PlasmaActivities/PlasmaActivitiesConfig.cmake
+/usr/lib64/cmake/PlasmaActivities/PlasmaActivitiesConfigVersion.cmake
+/usr/lib64/cmake/PlasmaActivities/PlasmaActivitiesLibraryTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/PlasmaActivities/PlasmaActivitiesLibraryTargets.cmake
+/usr/lib64/libPlasmaActivities.so
+/usr/lib64/pkgconfig/PlasmaActivities.pc
+
+%files lib
+%defattr(-,root,root,-)
+/usr/lib64/libPlasmaActivities.so.6
+/usr/lib64/libPlasmaActivities.so.6.0.2
+/usr/lib64/qt6/qml/org/kde/activities/libplasmaactivitiesextensionplugin.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/plasma-activities/20079e8f79713dce80ab09774505773c926afa2a
+/usr/share/package-licenses/plasma-activities/3c3d7573e137d48253731c975ecf90d74cfa9efe
+/usr/share/package-licenses/plasma-activities/757b86330df80f81143d5916b3e92b4bcb1b1890
+/usr/share/package-licenses/plasma-activities/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+/usr/share/package-licenses/plasma-activities/a0193e3fccf86c17dc71e3f6c0ac0b535e06bea3
+/usr/share/package-licenses/plasma-activities/e458941548e0864907e654fa2e192844ae90fc32
+/usr/share/package-licenses/plasma-activities/e712eadfab0d2357c0f50f599ef35ee0d87534cb
