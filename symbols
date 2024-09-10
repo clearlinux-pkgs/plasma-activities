@@ -1,87 +1,23 @@
-libPlasmaActivities.so.6:KActivities::Controller::addActivity(QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::qt_metacall(QMetaObject::Call, int, void**)
-libPlasmaActivities.so.6:KActivities::Controller::qt_metacast(char const*)
+libPlasmaActivities.so.6:KActivities::ActivitiesModel::ActivitiesModel(QObject*)
+libPlasmaActivities.so.6:KActivities::ActivitiesModel::~ActivitiesModel()
+libPlasmaActivities.so.6:KActivities::Consumer::Consumer(QObject*)
+libPlasmaActivities.so.6:KActivities::Consumer::serviceStatus()
+libPlasmaActivities.so.6:KActivities::Consumer::serviceStatusChanged(KActivities::Consumer::ServiceStatus)
+libPlasmaActivities.so.6:KActivities::Consumer::~Consumer()
+libPlasmaActivities.so.6:KActivities::Controller::Controller(QObject*)
 libPlasmaActivities.so.6:KActivities::Controller::nextActivity()
-libPlasmaActivities.so.6:KActivities::Controller::stopActivity(QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::startActivity(QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::removeActivity(QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::setActivityIcon(QString const&, QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::setActivityName(QString const&, QString const&)
 libPlasmaActivities.so.6:KActivities::Controller::previousActivity()
-libPlasmaActivities.so.6:KActivities::Controller::setCurrentActivity(QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::setActivityDescription(QString const&, QString const&)
-libPlasmaActivities.so.6:KActivities::Controller::Controller(QObject*)
-libPlasmaActivities.so.6:KActivities::Controller::Controller(QObject*)
 libPlasmaActivities.so.6:KActivities::Controller::~Controller()
-libPlasmaActivities.so.6:KActivities::Controller::~Controller()
-libPlasmaActivities.so.6:KActivities::Controller::~Controller()
-libPlasmaActivities.so.6:KActivities::versionMajor()
-libPlasmaActivities.so.6:KActivities::versionMinor()
-libPlasmaActivities.so.6:KActivities::versionString()
-libPlasmaActivities.so.6:KActivities::versionRelease()
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::qt_metacall(QMetaObject::Call, int, void**)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::qt_metacast(char const*)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::setShownStates(QList<KActivities::Info::State> const&)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::shownStatesChanged(QList<KActivities::Info::State> const&)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::ActivitiesModel(QList<KActivities::Info::State>, QObject*)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::ActivitiesModel(QObject*)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::ActivitiesModel(QList<KActivities::Info::State>, QObject*)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::ActivitiesModel(QObject*)
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::~ActivitiesModel()
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::~ActivitiesModel()
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::~ActivitiesModel()
-libPlasmaActivities.so.6:KActivities::ResourceInstance::notifyAccessed(QUrl const&, QString const&)
-libPlasmaActivities.so.6:KActivities::Info::iconChanged(QString const&)
-libPlasmaActivities.so.6:KActivities::Info::infoChanged()
-libPlasmaActivities.so.6:KActivities::Info::nameChanged(QString const&)
-libPlasmaActivities.so.6:KActivities::Info::qt_metacall(QMetaObject::Call, int, void**)
-libPlasmaActivities.so.6:KActivities::Info::qt_metacast(char const*)
-libPlasmaActivities.so.6:KActivities::Info::stateChanged(KActivities::Info::State)
-libPlasmaActivities.so.6:KActivities::Info::isCurrentChanged(bool)
-libPlasmaActivities.so.6:KActivities::Info::descriptionChanged(QString const&)
 libPlasmaActivities.so.6:KActivities::Info::added()
+libPlasmaActivities.so.6:KActivities::Info::infoChanged()
+libPlasmaActivities.so.6:KActivities::Info::isCurrentChanged(bool)
 libPlasmaActivities.so.6:KActivities::Info::removed()
 libPlasmaActivities.so.6:KActivities::Info::started()
+libPlasmaActivities.so.6:KActivities::Info::stateChanged(KActivities::Info::State)
 libPlasmaActivities.so.6:KActivities::Info::stopped()
-libPlasmaActivities.so.6:KActivities::Info::Info(QString const&, QObject*)
-libPlasmaActivities.so.6:KActivities::Info::Info(QString const&, QObject*)
-libPlasmaActivities.so.6:KActivities::Info::~Info()
-libPlasmaActivities.so.6:KActivities::Info::~Info()
 libPlasmaActivities.so.6:KActivities::Info::~Info()
 libPlasmaActivities.so.6:KActivities::version()
-libPlasmaActivities.so.6:KActivities::Consumer::qt_metacall(QMetaObject::Call, int, void**)
-libPlasmaActivities.so.6:KActivities::Consumer::qt_metacast(char const*)
-libPlasmaActivities.so.6:KActivities::Consumer::activityAdded(QString const&)
-libPlasmaActivities.so.6:KActivities::Consumer::serviceStatus()
-libPlasmaActivities.so.6:KActivities::Consumer::activityRemoved(QString const&)
-libPlasmaActivities.so.6:KActivities::Consumer::activitiesChanged(QList<QString> const&)
-libPlasmaActivities.so.6:KActivities::Consumer::serviceStatusChanged(KActivities::Consumer::ServiceStatus)
-libPlasmaActivities.so.6:KActivities::Consumer::currentActivityChanged(QString const&)
-libPlasmaActivities.so.6:KActivities::Consumer::runningActivitiesChanged(QList<QString> const&)
-libPlasmaActivities.so.6:KActivities::Consumer::Consumer(QObject*)
-libPlasmaActivities.so.6:KActivities::Consumer::Consumer(QObject*)
-libPlasmaActivities.so.6:KActivities::Consumer::~Consumer()
-libPlasmaActivities.so.6:KActivities::Consumer::~Consumer()
-libPlasmaActivities.so.6:KActivities::Consumer::~Consumer()
-libPlasmaActivities.so.6:KActivities::Controller::metaObject() const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::headerData(int, Qt::Orientation, int) const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::metaObject() const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::shownStates() const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::data(QModelIndex const&, int) const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::rowCount(QModelIndex const&) const
-libPlasmaActivities.so.6:KActivities::ActivitiesModel::roleNames() const
-libPlasmaActivities.so.6:KActivities::Info::metaObject() const
-libPlasmaActivities.so.6:KActivities::Info::description() const
-libPlasmaActivities.so.6:KActivities::Info::availability() const
-libPlasmaActivities.so.6:KActivities::Info::id() const
-libPlasmaActivities.so.6:KActivities::Info::uri() const
-libPlasmaActivities.so.6:KActivities::Info::icon() const
-libPlasmaActivities.so.6:KActivities::Info::name() const
-libPlasmaActivities.so.6:KActivities::Info::state() const
-libPlasmaActivities.so.6:KActivities::Info::isValid() const
-libPlasmaActivities.so.6:KActivities::Info::isCurrent() const
-libPlasmaActivities.so.6:KActivities::Consumer::activities(KActivities::Info::State) const
-libPlasmaActivities.so.6:KActivities::Consumer::activities() const
-libPlasmaActivities.so.6:KActivities::Consumer::metaObject() const
-libPlasmaActivities.so.6:KActivities::Consumer::currentActivity() const
-libPlasmaActivities.so.6:KActivities::Consumer::runningActivities() const
+libPlasmaActivities.so.6:KActivities::versionMajor()
+libPlasmaActivities.so.6:KActivities::versionMinor()
+libPlasmaActivities.so.6:KActivities::versionRelease()
+libPlasmaActivities.so.6:KActivities::versionString()
